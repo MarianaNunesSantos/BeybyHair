@@ -1,0 +1,205 @@
+main{
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    color: #551c1c !important;
+}
+
+.section-carrinho{
+    display: flex;
+    justify-content: space-between;
+}
+
+.div-carrinho {
+    width: 100% !important;
+    margin: 0 auto;
+}
+
+
+/* INÍCIO DO ESTILO DA TABELA */
+.tabela-produtos{
+    padding: 0 !important;
+    padding-right: 20px !important;
+}
+
+.table{
+    border: 1px #eda3a3 solid !important;
+    color: #551c1c !important;
+}
+
+.table th {
+    background-color: #eda3a3 !important;
+    font-weight: 600;
+    color: white !important;
+    font-weight: bold;
+    text-align: center;
+}
+
+.table td {
+    vertical-align: middle;
+    color: #551c1c !important;
+    padding-top: 30px !important;
+    padding-bottom: 30px !important;
+}
+
+.imagem-produto img{
+    width: 120px !important;
+    margin: 0 !important;
+}
+
+.text-muted strong{
+    color: #551c1c !important;
+}
+
+.descricao-produto{
+    font-size: 10pt !important;
+    margin: 0 !important;
+}
+
+.quantidade {
+    border: 1px solid #551c1c !important;
+    color: #551c1c !important;
+}
+
+.quantidade::-webkit-outer-spin-button,
+.quantidade::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.diminuir, .aumentar{
+    border: 1px solid #551c1c !important;
+    color: #551c1c !important;
+}
+
+.diminuir:hover, .aumentar:hover{
+    background-color: #551c1c !important;
+    color: white !important;
+}
+
+.remover-item{
+    border: none !important;
+    background-color: white !important;
+}
+
+.remover-item img{
+    width: 25px;
+}
+/* FIM DO ESTILO DA TABELA */
+
+
+/* INÍCIO DO ESTILO DO MENU */
+.card {
+    background-color: #fadce0 !important;
+    border: #fadce0 !important;
+    border-radius: 20px !important;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    color: #551c1c !important;
+}
+
+.card-title{
+    text-align: center;
+}
+
+#cupom{
+    background-color: #fadce0 !important;
+    border: none !important;
+    padding-left: 0;
+}
+
+#cupom:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px #ffcccc;
+    border-color: #ffcccc; 
+}
+
+.aplicar-cupom{
+    border: white !important;
+    border-radius: 20px !important;
+    background-color: white !important;
+    color: #551c1c !important;
+}
+
+#finalizar-compra, #continuar-comprando {
+    width: 80%;
+    border-radius: 30px;
+    font-size: 10pt;
+    font-weight: 600;
+    margin: 5px !important;
+    padding: 5px !important;
+    letter-spacing: 0.5px;
+    font-weight: bold !important;
+    background-color: white !important;
+    border-color: white !important;
+    color: #551c1c !important;
+}
+
+#finalizar-compra a, #continuar-comprando a{
+    color: #551c1c !important;
+    width: 100% !important;
+}
+
+#finalizar-compra a:hover,
+#continuar-comprando a:hover{
+    background-color: #ffb7b7 !important;
+    border-color: #ffb7b7 !important;
+    color: white !important;
+}
+
+#finalizar-compra:hover,
+#continuar-comprando:hover{
+    background-color: #ffb7b7 !important;
+    border-color: #ffb7b7 !important;
+    color: white !important;
+}
+
+#finalizar-compra:link, 
+#finalizar-compra:visited,
+#continuar-comprando:link, 
+#continuar-comprando:visited {
+    color: #551c1c !important;
+    text-decoration: none;
+}
+
+.btn-outline-secondary {
+    border-color: #ced4da;
+}
+
+.btn-outline-secondary:hover {
+    background-color: #f8f9fa;
+}
+
+.btn-sem-produtos{
+    border-radius: 30px;
+    font-size: 10pt;
+    font-weight: 600;
+    margin: 5px !important;
+    padding: 5px !important;
+    letter-spacing: 0.5px;
+    font-weight: bold !important;
+    background-color: #ffcccc !important;
+    border-color: #ffcccc !important;
+    color: white !important;
+}
+
+.btn-sem-produtos:hover{
+    background-color: #eda3a3 !important;
+    border-color: #eda3a3 !important;
+}
+
+.btn-sem-produtos:link, 
+.btn-sem-produtos:visited{
+    color: white !important;
+    text-decoration: none;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .table-responsive {
+        overflow-x: auto;
+    }
+    
+    .table td, .table th {
+        white-space: nowrap;
+    }
+}

@@ -1,0 +1,180 @@
+.categoria-wrapper a:link,:visited{
+    text-decoration: none;
+    color: #551c1c !important;
+}
+
+/*Começo carrosel de banners*/
+.div-img-carrosel-banner img {
+    width: 100%;
+    position: relative;
+    margin: 0;
+}
+
+.div-img-carrosel-banner {
+    display: none;
+    text-align: center;
+    margin-top: 0;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.div-img-carrosel-banner.active {
+    opacity: 1;
+    display: block;
+}
+
+.text,
+.numbertext {
+    color: #e7070700;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+.botoes-carrosel {
+    width: 100%;
+    display: inline-flex;
+    justify-content: center;
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 3px 2px;
+    margin-right: 6px;
+    background-color: #ffcccc;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+    background-color: #eda3a3;
+}
+
+.prev,
+.next {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    text-decoration: none;
+    color: #551c1c;
+}
+
+.prev:hover,
+.next:hover {
+    text-decoration: none;
+}
+
+/*fim carrosel banner */
+
+main {
+    display: flex;
+    align-items: center;
+}
+
+/*Começo carrosel de marcas*/
+
+.div-img-marcas img {
+    margin: 0 20px;
+    height: 100px;
+}
+
+.div-carrosel-marcas {
+    width: 100%;
+    padding-left: 60px 0;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.section-carrosel-marcas {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+}
+
+@keyframes slide {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+.div-img-marcas {
+    display: inline-block;
+    animation: 30s slide infinite linear;
+}
+
+/*Fim carrosel de marcas*/
+
+/*Começo do demonstrativo de produtos*/
+.banner img {
+    width: 100%;
+}
+
+.div-produtos {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card {
+    border: none !important; 
+}
+
+.card-img-top{
+    max-height: 300px;
+}
+
+.card-body h4,
+h5,
+p {
+    color: #551c1c;
+    text-align: center;
+}
+
+.card-body h4,
+h5 {
+    color: #551c1c !important;
+    font-weight: bold !important;
+}
+
+.card-title, .card-subtitle {
+    color: #551c1c !important;
+}
+
+.card-title{
+    min-height: 120px !important;
+}
+
+.btn-primary {
+    width: 100%;
+    background-color: #ffcccc !important;
+    border-color: #ffcccc !important;
+    font-size: 100% !important;
+    font-weight: bold !important;
+    color: white !important;
+}
+
+.btn-primary,
+.btn-primary:link, 
+.btn-primary:visited {
+    color: white !important;
+    text-decoration: none;
+}
+
+.btn-primary:hover{
+    background-color: #eda3a3 !important;
+    border-color: #eda3a3 !important;
+}
+/*Fim do demonstrativo de produtos*/

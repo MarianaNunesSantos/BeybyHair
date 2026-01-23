@@ -1,0 +1,65 @@
+main{
+    margin-top: 20px;
+}
+
+.titulo{
+    text-align: center !important;
+    font-size: 60px;
+}
+
+.titulo img{
+    max-width: 60px;
+}
+
+/* Estilos para os cards que mostram os produtos */
+.card {
+    border: none !important; 
+}
+
+.card-img-top{
+    max-height: 300px;
+}
+
+.card-body h4,
+h5,
+p {
+    color: #551c1c;
+    text-align: center;
+}
+
+.card-body h4,
+h5 {
+    color: #551c1c !important;
+    font-weight: bold !important;
+}
+
+.card-title, .card-subtitle {
+    color: #551c1c !important;
+}
+
+.card-title{
+    min-height: 120px !important;
+}
+
+.btn-primary {
+    width: 100%;
+    background-color: #ffcccc !important;
+    border-color: #ffcccc !important;
+    font-size: 100% !important;
+    font-weight: bold !important;
+    color: white !important;
+}
+
+.btn-primary,
+.btn-primary:link, 
+.btn-primary:visited {
+    color: white !important;
+    text-decoration: none;
+}
+
+.btn-primary:hover{
+    background-color: #eda3a3 !important;
+    border-color: #eda3a3 !important;
+}
+
+/* Fim estilos para os cards que mostram os produtos */

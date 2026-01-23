@@ -1,0 +1,21 @@
+head, header, body, main, footer{
+    color: #551c1c;
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style:normal;
+}
+
+a:link,:visited{
+    text-decoration: none;
+    color: #551c1c;
+}
+
+button a:link,:visited{
+    text-decoration: none;
+    color: white;
+}
+
+a:hover{
+    text-decoration:underline;
+}

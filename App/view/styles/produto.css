@@ -1,0 +1,189 @@
+.produto {
+    width: 100% !important;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.div-page-produto {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: flex-start !important;
+    justify-content: center !important;
+    margin-top: 2% !important;
+}
+
+.imagens-produto {
+    display: flex !important;
+    flex-direction: column !important;
+}
+
+.imagens-produto img {
+    height: 25% !important;
+    margin-bottom: 2px !important;
+    cursor: pointer !important;
+}
+
+.imagens-produto img.selected {
+    border: 2px solid #fabebe !important; 
+    border-radius: 3px !important;
+}
+
+.imagem-selecionada {
+    position: relative;
+    padding: 0 !important;
+}
+
+.imagem-selecionada img {
+    width: 100% !important;
+}
+
+/* Estilos para o botão de favorito */
+.favorito-container {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 10;
+}
+
+.btn-favorito {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-favorito:hover {
+    transform: scale(1.1);
+}
+
+.btn-favorito img {
+    width: 100%;
+}
+
+.btn-favorito img.favoritado {
+    filter: brightness(0) saturate(100%) invert(27%) sepia(51%) saturate(2878%) hue-rotate(346deg) brightness(104%) contrast(97%);
+}
+
+.descricao-produto {
+    margin-left: 10px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: flex-start !important;
+}
+
+.descricao-produto h1 {
+    font-size: 22pt !important;
+    margin-top: 0px !important;
+    margin-bottom: 20px !important;
+}
+
+.descricao-produto h2 {
+    font-size: 22pt !important;
+    margin: 0px !important;
+}
+
+.descricao-produto p {
+    margin-top: 0px !important;
+    margin-bottom: 30px !important;
+}
+
+.estrelas-avaliar img{
+    width:80px !important;
+    margin-right: 10px !important;
+}
+
+.estrelas-avaliar{
+    font-size: 11pt !important;
+    color:#eda3a3 !important;
+    display: flex !important;
+}
+
+.button-produto{
+    background-color: #ffcccc !important;
+    border: #ffcccc !important;
+    color: white !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+}
+
+.button-produto a{
+    color: white !important;
+}
+
+.button-produto:hover{
+    background-color: #eda3a3 !important;
+    border-color: #eda3a3 !important;
+}
+
+.descricao-produto button {
+    height: 40px !important;
+    font-size: 18pt !important;
+}
+
+.div-informacoes-produto{
+    width: 100% !important;
+}
+
+.informacoes-produto {
+    max-width: 66.666667%; /* Equivalente a 8 colunas no Bootstrap */
+    width: 100%;
+    margin-top: 30px;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+}
+
+.avaliacao-produto {
+    width: 100% !important;
+    margin-top: 30px !important;
+    margin-bottom: 20px !important;
+}
+
+.avaliacoes {
+    display:flex !important;
+    justify-content: space-between !important;
+}
+
+.avaliacoes button{
+    height: 28px !important;
+    font-size: 12pt !important;
+}
+
+@media (max-width: 767.98px) {
+    .produto {
+        padding: 0;
+    }
+    
+    .informacoes-produto {
+        width: 100% !important;
+        max-width: 100% !important; 
+        padding: 0 15px;
+
+    }
+    
+    .imagem-selecionada {
+        padding: 0; 
+    }   
+}
+
+/* ESTILO PARA ALERTA DE PRODUTO ADICIONADO */
+.swal2-popup {
+    background-color: #fadce0 !important;
+    color: #551c1c !important;
+}
+
+.swal2-title, .swal2-content {
+    font-family: "Playfair Display", serif !important;
+    color: #551c1c !important; 
+}
+
+.swal2-confirm {
+    font-family: "Playfair Display", serif !important;
+    background-color: #551c1c !important;
+    color: white !important;
+}
