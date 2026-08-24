@@ -66,7 +66,7 @@ $total = array_reduce($carrinho, function ($sum, $item) {
                 <div class="row align-items-center">
                     <!-- Logo -->
                     <div class="col-md-3 col-12 text-center navbar-brand">
-                        <a href="../../index.php">
+                        <a href="../../../index.php">
                             <img src="../img/logo-com-título.png" alt="Ícone da logo do BeybyHair" width="75%">
                         </a>
                     </div>
@@ -266,7 +266,7 @@ $total = array_reduce($carrinho, function ($sum, $item) {
                     <!-- Mostra a imagem quando o usuário está logado e o carrinho está vazio -->
                     <div class="text-center">
                         <img src="../img/sem-produtos.png" alt="Carrinho vazio" class="img-fluid">
-                        <a href="../../index.php" class="btn btn-primary btn-sem-produtos">CONTINUAR COMPRANDO</a>
+                        <a href="../../../index.php" class="btn btn-primary btn-sem-produtos">CONTINUAR COMPRANDO</a>
                     </div>
                 <?php else: ?>
                     <!-- Mostra o carrinho normal quando há produtos ou usuário não está logado -->
@@ -365,7 +365,7 @@ $total = array_reduce($carrinho, function ($sum, $item) {
                                             <a href="entrega.php">ESCOLHER ENDEREÇO</a>
                                         </button>
                                         <button class="btn btn-primary py-3" id="continuar-comprando">
-                                            <a href="../../index.php">CONTINUAR COMPRANDO</a>
+                                            <a href="../../../index.php">CONTINUAR COMPRANDO</a>
                                         </button>
                                     </div>
                                 </div>

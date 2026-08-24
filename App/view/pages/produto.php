@@ -8,7 +8,7 @@ $pdo = $conexao->fazConexao();
 
 // Verifica se o ID do produto foi passado
 if (!isset($_GET['id'])) {
-    header('Location: ../../index.php');
+    header('Location: ../../../index.php');
     exit();
 }
 
@@ -22,7 +22,7 @@ try {
 
     // Se não encontrar o produto, redireciona
     if (!$produto) {
-        header('Location: ../../index.php');
+        header('Location: ../../../index.php');
         exit();
     }
 } catch (PDOException $e) {
@@ -91,7 +91,7 @@ if (isset($_SESSION['id'])) {
                 <div class="row align-items-center">
                     <!-- Logo -->
                     <div class="col-md-3 col-12 text-center navbar-brand">
-                        <a href="../../index.php">
+                        <a href="../../../index.php">
                             <img src="../img/logo-com-título.png" alt="Ícone da logo do BeybyHair" width="75%">
                         </a>
                     </div>

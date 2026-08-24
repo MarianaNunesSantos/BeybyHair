@@ -81,7 +81,7 @@ try {
                 <div class="row align-items-center">
                     <!-- Logo -->
                     <div class="col-md-3 col-12 text-center navbar-brand">
-                        <a href="../../index.php">
+                        <a href="../../../index.php">
                             <img src="../img/logo-com-título.png" alt="Ícone da logo do BeybyHair" width="75%">
                         </a>
                     </div>

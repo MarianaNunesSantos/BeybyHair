@@ -110,7 +110,7 @@ $totalComDesconto = $total - $descontoCupom;
                 <div class="row align-items-center">
                     <!-- Logo -->
                     <div class="col-md-3 col-12 text-center navbar-brand">
-                        <a href="../../index.php">
+                        <a href="../../../index.php">
                             <img src="../img/logo-com-título.png" alt="Ícone da logo do BeybyHair" width="75%">
                         </a>
                     </div>
@@ -490,7 +490,7 @@ $totalComDesconto = $total - $descontoCupom;
                                         <a href="#">FINALIZAR COMPRA</a>
                                     </button>
                                     <button class="btn btn-primary py-3" id="continuar-comprando"><a
-                                            href="../../index.php">CONTINUAR COMPRANDO</a></button>
+                                            href="../../../index.php">CONTINUAR COMPRANDO</a></button>
 
                                 </div>
                             </div>

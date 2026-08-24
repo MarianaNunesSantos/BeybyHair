@@ -8,7 +8,7 @@ if (!isset($_SESSION['id'])) {
 }
 
 if (!isset($_GET['idProduto'])) {
-    header('Location: ../index.php');
+    header('Location: ../App/index.php');
     exit();
 }
 
