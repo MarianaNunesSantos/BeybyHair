@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-require_once 'DAO/conexao.php';
+require_once 'App/DAO/conexao.php';
 $conexao = new Conexao();
 $pdo = $conexao->fazConexao();
 
