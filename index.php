@@ -52,15 +52,15 @@ function exibirProdutosPorMarca($marca, $produtosDaMarca)
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="shortcut icon" href="view/img/logo-branco.png" type="image/x-icon">
+  <link rel="shortcut icon" href="App/view/img/logo-branco.png" type="image/x-icon">
   <!-- Link para o CSS do Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <!-- Links para os nossos CSS -->
-  <link rel="stylesheet" href="view/styles/default.css">
-  <link rel="stylesheet" href="view/styles/cabecalho-rodape.css">
-  <link rel="stylesheet" href="view/styles/index.css">
-  <script src="view/script/cabecalho-rodape.js" defer></script>
-  <script src="view/script/index.js" defer></script>
+  <link rel="stylesheet" href="App/view/styles/default.css">
+  <link rel="stylesheet" href="App/view/styles/cabecalho-rodape.css">
+  <link rel="stylesheet" href="App/view/styles/index.css">
+  <script src="App/view/script/cabecalho-rodape.js" defer></script>
+  <script src="App/view/script/index.js" defer></script>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
     rel="stylesheet">
   <link rel="stylesheet"
@@ -74,16 +74,16 @@ function exibirProdutosPorMarca($marca, $produtosDaMarca)
   <section class="top-bar">
     <div class="container-top col-md-8 col-12 row align-items-center">
       <!-- Parte do frete e das parcelas -->
-      <span class="col-md-2 col-6 frete"><img src="view/img/icon-caminhao.png" alt="Ícone de caminhão" width="25"> FRETE
+      <span class="col-md-2 col-6 frete"><img src="App/view/img/icon-caminhao.png" alt="Ícone de caminhão" width="25"> FRETE
         GRÁTIS</span>
-      <span class="col-md-2 col-6 frete"><img src="view/img/icon-cartao.png" alt="Ícone de cartão de crédito"
+      <span class="col-md-2 col-6 frete"><img src="App/view/img/icon-cartao.png" alt="Ícone de cartão de crédito"
           width="25"> EM ATÉ 6X (SEM JUROS*)</span>
 
       <!-- Parte dos pedidos e atendimento -->
       <a href="#" class="col-md-2 d-none d-sm-block pedidos">Meus agendamentos</a>
-      <a href="#" class="col-md-2 d-none d-sm-block pedidos"><img src="view/img/icon-balao-conversa.png"
+      <a href="#" class="col-md-2 d-none d-sm-block pedidos"><img src="App/view/img/icon-balao-conversa.png"
           alt="Ícone de balão de conversa" width="20"> Fale conosco</a>
-      <span class="col-md-2 d-none d-sm-block pedidos"><img src="view/img/icon-telefone.png" alt="Ícone de telefone"
+      <span class="col-md-2 d-none d-sm-block pedidos"><img src="App/view/img/icon-telefone.png" alt="Ícone de telefone"
           width="20"> (51)99002-8922</span>
     </div>
   </section>
@@ -104,7 +104,7 @@ function exibirProdutosPorMarca($marca, $produtosDaMarca)
           <div class="col-md-4 col-12 nav-input">
             <div class="search-box">
               <input type="text" placeholder="O que você procura?">
-              <a href="#"><img src="view/img/icon-lupa.png" class="lupa-barra-pesquisa" alt="Ícone de lupa"
+              <a href="#"><img src="App/view/img/icon-lupa.png" class="lupa-barra-pesquisa" alt="Ícone de lupa"
                   width="25"></a>
             </div>
           </div>
@@ -118,37 +118,37 @@ function exibirProdutosPorMarca($marca, $produtosDaMarca)
               $sobrenome = $_SESSION['sobrenome'] ?? '';
               ?>
               <button class="btn-minha-conta"
-                onclick="window.location.href='controller/processaUsuario.php?&idUsuario=<?= $_SESSION['id'] ?>'">
-                <a href="view/pages/perfil.php" class="btn btn-link"><img src="view/img/icon-user-fundo-branco.png"
+                onclick="window.location.href='App/controller/processaUsuario.php?&idUsuario=<?= $_SESSION['id'] ?>'">
+                <a href="App/view/pages/perfil.php" class="btn btn-link"><img src="App/view/img/icon-user-fundo-branco.png"
                     alt="Ícone de user"><?= htmlspecialchars($nome . ' ' . $sobrenome) ?></a>
               </button>
             <?php else: ?>
               <!-- Botão quando NÃO LOGADO -->
-              <a href="view/pages/login.php" class="btn btn-link"><img src="view/img/icon-user-fundo-branco.png"
+              <a href="App/view/pages/login.php" class="btn btn-link"><img src="App/view/img/icon-user-fundo-branco.png"
                   alt="Ícone de user">Entre ou<br>cadastre-se</a>
             <?php endif; ?>
 
             <?php if (isset($_SESSION['id'])): ?>
               <!-- Botão quando LOGADO -->
-              <a href="view/pages/favoritos.php" class="btn btn-link">
-                <img src="view/img/icon-favoritar.png" alt="Ícone de coração vazado">Favoritos
+              <a href="App/view/pages/favoritos.php" class="btn btn-link">
+                <img src="App/view/img/icon-favoritar.png" alt="Ícone de coração vazado">Favoritos
               </a>
             <?php else: ?>
               <!-- Botão quando NÃO LOGADO -->
-              <a href="view/pages/login.php" class="btn btn-link">
-                <img src="view/img/icon-favoritar.png" alt="Ícone de coração vazado">Favoritos
+              <a href="App/view/pages/login.php" class="btn btn-link">
+                <img src="App/view/img/icon-favoritar.png" alt="Ícone de coração vazado">Favoritos
               </a>
             <?php endif; ?>
 
             <?php if (isset($_SESSION['id'])): ?>
               <!-- Botão quando LOGADO -->
-              <a href="view/pages/carrinho.php" class="btn btn-link">
-                <img src="view/img/icon-carrinho-vazio.png" alt="Ícone de carrinho de compras">Sacola
+              <a href="App/view/pages/carrinho.php" class="btn btn-link">
+                <img src="App/view/img/icon-carrinho-vazio.png" alt="Ícone de carrinho de compras">Sacola
               </a>
             <?php else: ?>
               <!-- Botão quando NÃO LOGADO -->
-              <a href="view/pages/login.php" class="btn btn-link">
-                <img src="view/img/icon-carrinho-vazio.png" alt="Ícone de carrinho de compras">Sacola
+              <a href="App/view/pages/login.php" class="btn btn-link">
+                <img src="App/view/img/icon-carrinho-vazio.png" alt="Ícone de carrinho de compras">Sacola
               </a>
             <?php endif; ?>
 
@@ -190,170 +190,170 @@ function exibirProdutosPorMarca($marca, $produtosDaMarca)
           </div>
 
           <div class="d-inline-block categoria-wrapper">
-            <a href="view/pages/categoria.php?categoria=COLORAÇÕES" class="categoria-link d-none d-sm-block">COLORAÇÕES</a>
+            <a href="App/view/pages/categoria.php?categoria=COLORAÇÕES" class="categoria-link d-none d-sm-block">COLORAÇÕES</a>
             <div class="submenu-flutuante">
               <div class="item-submenu"><a
-                  href="view/pages/subcategoria.php?subcategoria=Colorações para cabelo">Colorações para cabelo</a>
+                  href="App/view/pages/subcategoria.php?subcategoria=Colorações para cabelo">Colorações para cabelo</a>
               </div>
-              <div class="item-submenu"><a href="view/pages/subcategoria.php?subcategoria=Tonalizantes">Tonalizantes</a>
+              <div class="item-submenu"><a href="App/view/pages/subcategoria.php?subcategoria=Tonalizantes">Tonalizantes</a>
               </div>
-              <div class="item-submenu"><a href="view/pages/subcategoria.php?subcategoria=Oxidantes">Oxidantes</a></div>
+              <div class="item-submenu"><a href="App/view/pages/subcategoria.php?subcategoria=Oxidantes">Oxidantes</a></div>
               <div class="item-submenu"><a
-                  href="view/pages/subcategoria.php?subcategoria=Descolorantes">Descolorantes</a></div>
+                  href="App/view/pages/subcategoria.php?subcategoria=Descolorantes">Descolorantes</a></div>
               <div class="item-submenu"><a
-                  href="view/pages/subcategoria.php?subcategoria=Colorações para sobrancelha">Colorações para
+                  href="App/view/pages/subcategoria.php?subcategoria=Colorações para sobrancelha">Colorações para
                   sobrancelha</a></div>
               <div class="item-submenu"><a
-                  href="view/pages/subcategoria.php?subcategoria=Retoques corretivos para raiz">Retoques corretivos para
+                  href="App/view/pages/subcategoria.php?subcategoria=Retoques corretivos para raiz">Retoques corretivos para
                   raiz</a></div>
               <div class="item-submenu"><a
-                  href="view/pages/subcategoria.php?subcategoria=Colorações temporárias">Colorações temporárias</a>
+                  href="App/view/pages/subcategoria.php?subcategoria=Colorações temporárias">Colorações temporárias</a>
               </div>
-              <div class="item-submenu"><a href="view/pages/subcategoria.php?subcategoria=Acessórios">Acessórios</a>
+              <div class="item-submenu"><a href="App/view/pages/subcategoria.php?subcategoria=Acessórios">Acessórios</a>
               </div>
-              <div class="item-submenu"><a href="view/pages/subcategoria.php?subcategoria=Reveladores">Reveladores</a>
+              <div class="item-submenu"><a href="App/view/pages/subcategoria.php?subcategoria=Reveladores">Reveladores</a>
               </div>
             </div>
           </div> <span class="separador-categoria">|</span>
 
           <div class="d-inline-block categoria-wrapper">
-            <a href="view/pages/categoria.php?categoria=MAQUIAGEM" class="categoria-link d-none d-sm-block">MAQUIAGEM</a>
+            <a href="App/view/pages/categoria.php?categoria=MAQUIAGEM" class="categoria-link d-none d-sm-block">MAQUIAGEM</a>
             <div class="submenu-flutuante">
-              <div class="item-submenu"><a href="view/pages/subcategoria.php?subcategoria=Esponjas">Esponjas</a></div>
+              <div class="item-submenu"><a href="App/view/pages/subcategoria.php?subcategoria=Esponjas">Esponjas</a></div>
               <div class="item-submenu"><a
-                  href="view/pages/subcategoria.php?subcategoria=<?= urlencode('Batom/Gloss') ?>">Batom/Gloss</a></div>
-              <div class="item-submenu"><a href="view/pages/subcategoria.php?subcategoria=Máscara para cílios">Máscara
+                  href="App/view/pages/subcategoria.php?subcategoria=<?= urlencode('Batom/Gloss') ?>">Batom/Gloss</a></div>
+              <div class="item-submenu"><a href="App/view/pages/subcategoria.php?subcategoria=Máscara para cílios">Máscara
                   para cílios</a></div>
               <div class="item-submenu"><a
-                  href="view/pages/subcategoria.php?subcategoria=<?= urlencode('Bases/Pancakes') ?>">Bases/Pancakes</a>
+                  href="App/view/pages/subcategoria.php?subcategoria=<?= urlencode('Bases/Pancakes') ?>">Bases/Pancakes</a>
               </div>
-              <div class="item-submenu"><a href="view/pages/subcategoria.php?subcategoria=Pós">Pós</a></div>
-              <div class="item-submenu"><a href="view/pages/subcategoria.php?subcategoria=Blush">Blush</a></div>
-              <div class="item-submenu"><a href="view/pages/subcategoria.php?subcategoria=Iluminadores">Iluminadores</a>
+              <div class="item-submenu"><a href="App/view/pages/subcategoria.php?subcategoria=Pós">Pós</a></div>
+              <div class="item-submenu"><a href="App/view/pages/subcategoria.php?subcategoria=Blush">Blush</a></div>
+              <div class="item-submenu"><a href="App/view/pages/subcategoria.php?subcategoria=Iluminadores">Iluminadores</a>
               </div>
-              <div class="item-submenu"><a href="view/pages/subcategoria.php?subcategoria=Corretivos">Corretivos</a>
+              <div class="item-submenu"><a href="App/view/pages/subcategoria.php?subcategoria=Corretivos">Corretivos</a>
               </div>
               <div class="item-submenu"><a
-                  href="view/pages/subcategoria.php?subcategoria=<?= urlencode('Bronzers/Contornos') ?>">Bronzers/Contornos</a>
+                  href="App/view/pages/subcategoria.php?subcategoria=<?= urlencode('Bronzers/Contornos') ?>">Bronzers/Contornos</a>
               </div>
-              <div class="item-submenu"><a href="view/pages/subcategoria.php?subcategoria=Lápis para os olhos">Lápis
+              <div class="item-submenu"><a href="App/view/pages/subcategoria.php?subcategoria=Lápis para os olhos">Lápis
                   para os olhos</a></div>
-              <div class="item-submenu"><a href="view/pages/subcategoria.php?subcategoria=Acessórios">Acessórios</a>
+              <div class="item-submenu"><a href="App/view/pages/subcategoria.php?subcategoria=Acessórios">Acessórios</a>
               </div>
             </div>
           </div> <span class="separador-categoria">|</span>
 
           <div class="d-inline-block categoria-wrapper">
-            <a href="view/pages/categoria.php?categoria=CABELOS" class="categoria-link d-none d-sm-block">CABELOS</a>
+            <a href="App/view/pages/categoria.php?categoria=CABELOS" class="categoria-link d-none d-sm-block">CABELOS</a>
             <div class="submenu-flutuante">
-              <div class="item-submenu"><a href="view/pages/subcategoria.php?subcategoria=Shampoos">Shampoos</a></div>
+              <div class="item-submenu"><a href="App/view/pages/subcategoria.php?subcategoria=Shampoos">Shampoos</a></div>
               <div class="item-submenu"><a
-                  href="view/pages/subcategoria.php?subcategoria=Condicionadores">Condicionadores</a></div>
-              <div class="item-submenu"><a href="view/pages/subcategoria.php?subcategoria=Cremes">Cremes</a></div>
-              <div class="item-submenu"><a href="view/pages/subcategoria.php?subcategoria=Óleos">Óleos</a></div>
-              <div class="item-submenu"><a href="view/pages/subcategoria.php?subcategoria=Máscaras capilares">Máscaras
+                  href="App/view/pages/subcategoria.php?subcategoria=Condicionadores">Condicionadores</a></div>
+              <div class="item-submenu"><a href="App/view/pages/subcategoria.php?subcategoria=Cremes">Cremes</a></div>
+              <div class="item-submenu"><a href="App/view/pages/subcategoria.php?subcategoria=Óleos">Óleos</a></div>
+              <div class="item-submenu"><a href="App/view/pages/subcategoria.php?subcategoria=Máscaras capilares">Máscaras
                   capilares</a></div>
               <div class="item-submenu"><a
-                  href="view/pages/subcategoria.php?subcategoria=Finalizadores">Finalizadores</a></div>
+                  href="App/view/pages/subcategoria.php?subcategoria=Finalizadores">Finalizadores</a></div>
               <div class="item-submenu"><a
-                  href="view/pages/subcategoria.php?subcategoria=<?= urlencode('Gel/Pomada/Cera') ?>">Gel/Pomada/Cera</a>
+                  href="App/view/pages/subcategoria.php?subcategoria=<?= urlencode('Gel/Pomada/Cera') ?>">Gel/Pomada/Cera</a>
               </div>
-              <div class="item-submenu"><a href="view/pages/subcategoria.php?subcategoria=Spray fixador">Spray
+              <div class="item-submenu"><a href="App/view/pages/subcategoria.php?subcategoria=Spray fixador">Spray
                   fixador</a></div>
-              <div class="item-submenu"><a href="view/pages/subcategoria.php?subcategoria=Kit de finalização">Kit de
+              <div class="item-submenu"><a href="App/view/pages/subcategoria.php?subcategoria=Kit de finalização">Kit de
                   finalização</a></div>
             </div>
           </div> <span class="separador-categoria">|</span>
 
           <div class="d-inline-block categoria-wrapper">
-            <a href="view/pages/categoria.php?categoria=SKINCARE" class="categoria-link d-none d-sm-block">SKINCARE</a>
+            <a href="App/view/pages/categoria.php?categoria=SKINCARE" class="categoria-link d-none d-sm-block">SKINCARE</a>
             <div class="submenu-flutuante">
-              <div class="item-submenu"><a href="view/pages/subcategoria.php?subcategoria=Hidratantes">Hidratantes</a>
+              <div class="item-submenu"><a href="App/view/pages/subcategoria.php?subcategoria=Hidratantes">Hidratantes</a>
               </div>
-              <div class="item-submenu"><a href="view/pages/subcategoria.php?subcategoria=Bronzeadores">Bronzeadores</a>
+              <div class="item-submenu"><a href="App/view/pages/subcategoria.php?subcategoria=Bronzeadores">Bronzeadores</a>
               </div>
-              <div class="item-submenu"><a href="view/pages/subcategoria.php?subcategoria=Esfoliantes">Esfoliantes</a>
+              <div class="item-submenu"><a href="App/view/pages/subcategoria.php?subcategoria=Esfoliantes">Esfoliantes</a>
               </div>
-              <div class="item-submenu"><a href="view/pages/subcategoria.php?subcategoria=Protetor solar">Protetor
+              <div class="item-submenu"><a href="App/view/pages/subcategoria.php?subcategoria=Protetor solar">Protetor
                   solar</a></div>
-              <div class="item-submenu"><a href="view/pages/subcategoria.php?subcategoria=Óleos">Óleos</a></div>
-              <div class="item-submenu"><a href="view/pages/subcategoria.php?subcategoria=Máscaras">Máscaras</a></div>
-              <div class="item-submenu"><a href="view/pages/subcategoria.php?subcategoria=Tratamento facial">Tratamento
+              <div class="item-submenu"><a href="App/view/pages/subcategoria.php?subcategoria=Óleos">Óleos</a></div>
+              <div class="item-submenu"><a href="App/view/pages/subcategoria.php?subcategoria=Máscaras">Máscaras</a></div>
+              <div class="item-submenu"><a href="App/view/pages/subcategoria.php?subcategoria=Tratamento facial">Tratamento
                   facial</a></div>
-              <div class="item-submenu"><a href="view/pages/subcategoria.php?subcategoria=Repelentes">Repelentes</a>
+              <div class="item-submenu"><a href="App/view/pages/subcategoria.php?subcategoria=Repelentes">Repelentes</a>
               </div>
-              <div class="item-submenu"><a href="view/pages/subcategoria.php?subcategoria=Talcos">Talcos</a></div>
-              <div class="item-submenu"><a href="view/pages/subcategoria.php?subcategoria=Acessórios">Acessórios</a>
+              <div class="item-submenu"><a href="App/view/pages/subcategoria.php?subcategoria=Talcos">Talcos</a></div>
+              <div class="item-submenu"><a href="App/view/pages/subcategoria.php?subcategoria=Acessórios">Acessórios</a>
               </div>
             </div>
           </div> <span class="separador-categoria">|</span>
 
           <div class="d-inline-block categoria-wrapper">
-            <a href="view/pages/categoria.php?categoria=ELÉTRICOS" class="categoria-link d-none d-sm-block">ELÉTRICOS</a>
+            <a href="App/view/pages/categoria.php?categoria=ELÉTRICOS" class="categoria-link d-none d-sm-block">ELÉTRICOS</a>
             <div class="submenu-flutuante">
               <div class="item-submenu"><a
-                  href="view/pages/subcategoria.php?subcategoria=Máquinas de acabamento">Máquinas de acabamento</a>
+                  href="App/view/pages/subcategoria.php?subcategoria=Máquinas de acabamento">Máquinas de acabamento</a>
               </div>
-              <div class="item-submenu"><a href="view/pages/subcategoria.php?subcategoria=Máquinas de corte">Máquinas de
+              <div class="item-submenu"><a href="App/view/pages/subcategoria.php?subcategoria=Máquinas de corte">Máquinas de
                   corte</a></div>
-              <div class="item-submenu"><a href="view/pages/subcategoria.php?subcategoria=Pranchas">Pranchas</a></div>
-              <div class="item-submenu"><a href="view/pages/subcategoria.php?subcategoria=Secadores">Secadores</a></div>
-              <div class="item-submenu"><a href="view/pages/subcategoria.php?subcategoria=Modeladores">Modeladores</a>
+              <div class="item-submenu"><a href="App/view/pages/subcategoria.php?subcategoria=Pranchas">Pranchas</a></div>
+              <div class="item-submenu"><a href="App/view/pages/subcategoria.php?subcategoria=Secadores">Secadores</a></div>
+              <div class="item-submenu"><a href="App/view/pages/subcategoria.php?subcategoria=Modeladores">Modeladores</a>
               </div>
-              <div class="item-submenu"><a href="view/pages/subcategoria.php?subcategoria=Difusores">Difusores</a></div>
+              <div class="item-submenu"><a href="App/view/pages/subcategoria.php?subcategoria=Difusores">Difusores</a></div>
               <div class="item-submenu"><a
-                  href="view/pages/subcategoria.php?subcategoria=Aparadores de pelos">Aparadores de pelos</a></div>
+                  href="App/view/pages/subcategoria.php?subcategoria=Aparadores de pelos">Aparadores de pelos</a></div>
               <div class="item-submenu"><a
-                  href="view/pages/subcategoria.php?subcategoria=<?= urlencode('Autoclaves/Estufas') ?>">Autoclaves/Estufas</a>
+                  href="App/view/pages/subcategoria.php?subcategoria=<?= urlencode('Autoclaves/Estufas') ?>">Autoclaves/Estufas</a>
               </div>
-              <div class="item-submenu"><a href="view/pages/subcategoria.php?subcategoria=Cabines de unhas">Cabines de
+              <div class="item-submenu"><a href="App/view/pages/subcategoria.php?subcategoria=Cabines de unhas">Cabines de
                   unhas</a></div>
             </div>
           </div> <span class="separador-categoria">|</span>
 
           <div class="d-inline-block categoria-wrapper">
-            <a href="view/pages/categoria.php?categoria=ACESSÓRIOS" class="categoria-link d-none d-sm-block">ACESSÓRIOS</a>
+            <a href="App/view/pages/categoria.php?categoria=ACESSÓRIOS" class="categoria-link d-none d-sm-block">ACESSÓRIOS</a>
             <div class="submenu-flutuante">
-              <div class="item-submenu"><a href="view/pages/subcategoria.php?subcategoria=Maletas">Maletas</a></div>
+              <div class="item-submenu"><a href="App/view/pages/subcategoria.php?subcategoria=Maletas">Maletas</a></div>
               <div class="item-submenu"><a
-                  href="view/pages/subcategoria.php?subcategoria=Borrifadores e Pulverizadores">Borrifadores e
+                  href="App/view/pages/subcategoria.php?subcategoria=Borrifadores e Pulverizadores">Borrifadores e
                   Pulverizadores</a></div>
               <div class="item-submenu"><a
-                  href="view/pages/subcategoria.php?subcategoria=<?= urlencode('Navalhas/Navalhetes') ?>">Navalhas/Navalhetes</a>
+                  href="App/view/pages/subcategoria.php?subcategoria=<?= urlencode('Navalhas/Navalhetes') ?>">Navalhas/Navalhetes</a>
               </div>
-              <div class="item-submenu"><a href="view/pages/subcategoria.php?subcategoria=Espelhos">Espelhos</a></div>
-              <div class="item-submenu"><a href="view/pages/subcategoria.php?subcategoria=Lenço descartável">Lenço
+              <div class="item-submenu"><a href="App/view/pages/subcategoria.php?subcategoria=Espelhos">Espelhos</a></div>
+              <div class="item-submenu"><a href="App/view/pages/subcategoria.php?subcategoria=Lenço descartável">Lenço
                   descartável</a></div>
-              <div class="item-submenu"><a href="view/pages/subcategoria.php?subcategoria=Nécessaire">Nécessaire</a>
+              <div class="item-submenu"><a href="App/view/pages/subcategoria.php?subcategoria=Nécessaire">Nécessaire</a>
               </div>
-              <div class="item-submenu"><a href="view/pages/subcategoria.php?subcategoria=Aventais">Aventais</a></div>
-              <div class="item-submenu"><a href="view/pages/subcategoria.php?subcategoria=Kit de viagem">Kit de
+              <div class="item-submenu"><a href="App/view/pages/subcategoria.php?subcategoria=Aventais">Aventais</a></div>
+              <div class="item-submenu"><a href="App/view/pages/subcategoria.php?subcategoria=Kit de viagem">Kit de
                   viagem</a></div>
-              <div class="item-submenu"><a href="view/pages/subcategoria.php?subcategoria=Capas para corte">Capas para
+              <div class="item-submenu"><a href="App/view/pages/subcategoria.php?subcategoria=Capas para corte">Capas para
                   corte</a></div>
             </div>
           </div> <span class="separador-categoria">|</span>
 
           <div class="d-inline-block categoria-wrapper">
-            <a href="view/pages/categoria.php?categoria=HOMENS" class="categoria-link d-none d-sm-block">HOMENS</a>
+            <a href="App/view/pages/categoria.php?categoria=HOMENS" class="categoria-link d-none d-sm-block">HOMENS</a>
             <div class="submenu-flutuante">
-              <div class="item-submenu"><a href="view/pages/subcategoria.php?subcategoria=Shampoos">Shampoos</a></div>
+              <div class="item-submenu"><a href="App/view/pages/subcategoria.php?subcategoria=Shampoos">Shampoos</a></div>
               <div class="item-submenu"><a
-                  href="view/pages/subcategoria.php?subcategoria=Condicionadores">Condicionadores</a></div>
-              <div class="item-submenu"><a href="view/pages/subcategoria.php?subcategoria=Tonalizantes">Tonalizantes</a>
+                  href="App/view/pages/subcategoria.php?subcategoria=Condicionadores">Condicionadores</a></div>
+              <div class="item-submenu"><a href="App/view/pages/subcategoria.php?subcategoria=Tonalizantes">Tonalizantes</a>
               </div>
-              <div class="item-submenu"><a href="view/pages/subcategoria.php?subcategoria=Perfumes">Perfumes</a></div>
+              <div class="item-submenu"><a href="App/view/pages/subcategoria.php?subcategoria=Perfumes">Perfumes</a></div>
               <div class="item-submenu"><a
-                  href="view/pages/subcategoria.php?subcategoria=<?= urlencode('Gel/Pomada/Cera') ?>">Gel/Pomada/Cera</a>
+                  href="App/view/pages/subcategoria.php?subcategoria=<?= urlencode('Gel/Pomada/Cera') ?>">Gel/Pomada/Cera</a>
               </div>
-              <div class="item-submenu"><a href="view/pages/subcategoria.php?subcategoria=Cuidados para barba">Cuidados
+              <div class="item-submenu"><a href="App/view/pages/subcategoria.php?subcategoria=Cuidados para barba">Cuidados
                   para barba</a></div>
-              <div class="item-submenu"><a href="view/pages/subcategoria.php?subcategoria=Pincel para barba">Pincel para
+              <div class="item-submenu"><a href="App/view/pages/subcategoria.php?subcategoria=Pincel para barba">Pincel para
                   barba</a></div>
-              <div class="item-submenu"><a href="view/pages/subcategoria.php?subcategoria=Kit de tratamento capilar">Kit
+              <div class="item-submenu"><a href="App/view/pages/subcategoria.php?subcategoria=Kit de tratamento capilar">Kit
                   de tratamento capilar</a></div>
               <div class="item-submenu"><a
-                  href="view/pages/subcategoria.php?subcategoria=Finalizadores">Finalizadores</a></div>
+                  href="App/view/pages/subcategoria.php?subcategoria=Finalizadores">Finalizadores</a></div>
             </div>
           </div> <span class="separador-categoria">|</span>
       </div>
@@ -364,27 +364,27 @@ function exibirProdutosPorMarca($marca, $produtosDaMarca)
     <div class="div-body-carrosel">
       <div class="div-img-carrosel-banner">
         <div class="numbertext">1/5</div>
-        <img src="view/img/img-carrossel-1.png" alt="Maquiagens em um fundo azul">
+        <img src="App/view/img/img-carrossel-1.png" alt="Maquiagens em um fundo azul">
         <div class="text">Título 1</div>
       </div>
       <div class="div-img-carrosel-banner">
         <div class="numbertext">2/5</div>
-        <img src="view/img/img-carrossel-2.png" alt="Paleta e pincel de maquiage em um fundo rosa">
+        <img src="App/view/img/img-carrossel-2.png" alt="Paleta e pincel de maquiage em um fundo rosa">
         <div class="text">Título 2</div>
       </div>
       <div class="div-img-carrosel-banner">
         <div class="numbertext">3/5</div>
-        <img src="view/img/img-carrossel-3.png" alt="Maquiagens em um fundo rosa">
+        <img src="App/view/img/img-carrossel-3.png" alt="Maquiagens em um fundo rosa">
         <div class="text">Título 3</div>
       </div>
       <div class="div-img-carrosel-banner">
         <div class="numbertext">4/5</div>
-        <img src="view/img/img-carrossel-4.png" alt="Batons com flores de fundo">
+        <img src="App/view/img/img-carrossel-4.png" alt="Batons com flores de fundo">
         <div class="text">Título 4</div>
       </div>
       <div class="div-img-carrosel-banner">
         <div class="numbertext">5/5</div>
-        <img src="view/img/img-carrossel-5.png" alt="Glos com flores de fundo">
+        <img src="App/view/img/img-carrossel-5.png" alt="Glos com flores de fundo">
         <div class="text">Título 5</div>
       </div>
       <div class="botoes-carrosel">
@@ -410,26 +410,26 @@ function exibirProdutosPorMarca($marca, $produtosDaMarca)
         <br>
         <div class="div-carrosel-marcas">
           <div class="div-img-marcas">
-            <img src="view/img/logo-boca-rosa.png" alt="">
-            <img src="view/img/logo-bruna-tavares.png" alt="">
-            <img src="view/img/logo-Kerastase.png" alt="">
-            <img src="view/img/logo-loreal.png" alt="">
-            <img src="view/img/logo-mari-maria.png" alt="">
-            <img src="view/img/logo-melu.png" alt="">
-            <img src="view/img/logo-niina-secrets.png" alt="">
-            <img src="view/img/logo-fenty.png" alt="">
-            <img src="view/img/logo-wella.png" alt="">
+            <img src="App/view/img/logo-boca-rosa.png" alt="">
+            <img src="App/view/img/logo-bruna-tavares.png" alt="">
+            <img src="App/view/img/logo-Kerastase.png" alt="">
+            <img src="App/view/img/logo-loreal.png" alt="">
+            <img src="App/view/img/logo-mari-maria.png" alt="">
+            <img src="App/view/img/logo-melu.png" alt="">
+            <img src="App/view/img/logo-niina-secrets.png" alt="">
+            <img src="App/view/img/logo-fenty.png" alt="">
+            <img src="App/view/img/logo-wella.png" alt="">
           </div>
           <div class="div-img-marcas">
-            <img src="view/img/logo-boca-rosa.png" alt="">
-            <img src="view/img/logo-bruna-tavares.png" alt="">
-            <img src="view/img/logo-Kerastase.png" alt="">
-            <img src="view/img/logo-loreal.png" alt="">
-            <img src="view/img/logo-mari-maria.png" alt="">
-            <img src="view/img/logo-melu.png" alt="">
-            <img src="view/img/logo-niina-secrets.png" alt="">
-            <img src="view/img/logo-fenty.png" alt="">
-            <img src="view/img/logo-wella.png" alt="">
+            <img src="App/view/img/logo-boca-rosa.png" alt="">
+            <img src="App/view/img/logo-bruna-tavares.png" alt="">
+            <img src="App/view/img/logo-Kerastase.png" alt="">
+            <img src="App/view/img/logo-loreal.png" alt="">
+            <img src="App/view/img/logo-mari-maria.png" alt="">
+            <img src="App/view/img/logo-melu.png" alt="">
+            <img src="App/view/img/logo-niina-secrets.png" alt="">
+            <img src="App/view/img/logo-fenty.png" alt="">
+            <img src="App/view/img/logo-wella.png" alt="">
           </div>
         </div>
       </section>
@@ -440,7 +440,7 @@ function exibirProdutosPorMarca($marca, $produtosDaMarca)
 
       <!-- Seção Bauny -->
       <section class="banner">
-        <img src="view/img/banner-bauny.webp" alt="Banner Bauny">
+        <img src="App/view/img/banner-bauny.webp" alt="Banner Bauny">
       </section>
 
       <br><br>
@@ -455,7 +455,7 @@ function exibirProdutosPorMarca($marca, $produtosDaMarca)
 
       <!-- Seção Bruna Tavares -->
       <section class="banner">
-        <img src="view/img/bruna-banner-gif.gif" alt="Banner Bruna Tavares">
+        <img src="App/view/img/bruna-banner-gif.gif" alt="Banner Bruna Tavares">
       </section>
 
       <br><br>
@@ -470,7 +470,7 @@ function exibirProdutosPorMarca($marca, $produtosDaMarca)
 
       <!-- Seção Ollie -->
       <section class="banner">
-        <img src="view/img/banner-ollie.webp" alt="Banner Ollie">
+        <img src="App/view/img/banner-ollie.webp" alt="Banner Ollie">
       </section>
 
       <br><br>
