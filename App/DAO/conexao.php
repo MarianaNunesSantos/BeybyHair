@@ -1,10 +1,10 @@
 <?php
     class Conexao{
         //Atributos
-        private $host = 'localhost:3306';
-        private $db_name = 'beybyhair';
-        private $username = 'root';
-        private $password = '';
+        private $host = 'bewb7ckehuavj2tlnfqr-mysql.services.clever-cloud.com';
+        private $db_name = 'bewb7ckehuavj2tlnfqr';
+        private $username = 'uexhzdw8y1vbuahk';
+        private $password = 'tlv6ZgTMyp3o12W5ZWuu';
         public $conn;
 
         public function fazConexao(){
