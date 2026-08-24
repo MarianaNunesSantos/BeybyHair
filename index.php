@@ -36,7 +36,7 @@ function exibirProdutosPorMarca($marca, $produtosDaMarca)
           <h4 class="card-title">' . htmlspecialchars($produto['nomePro']) . '</h4>
           <h5 class="card-subtitle">R$ ' . $preco . '</h5>
           <p class="card-text">2x R$ ' . $precoParcela . ' sem juros</p>
-          <a href="view/pages/produto.php?id=' . $produto['idPro'] . '" class="btn btn-primary">VER PRODUTO</a>
+          <a href="App/view/pages/produto.php?id=' . $produto['idPro'] . '" class="btn btn-primary">VER PRODUTO</a>
         </div>
       </div>
     </div>';
@@ -95,7 +95,7 @@ function exibirProdutosPorMarca($marca, $produtosDaMarca)
         <div class="row align-items-center">
           <!-- Logo -->
           <div class="col-md-3 col-12 text-center navbar-brand">
-            <a href="../App/index.php">
+            <a href="index.php">
               <img src="view/img/logo-com-título.png" alt="Ícone da logo do BeybyHair" width="75%">
             </a>
           </div>
